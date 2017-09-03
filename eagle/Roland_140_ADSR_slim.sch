@@ -15146,6 +15146,60 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="solpad">
+<description>&lt;b&gt;Solder Pads/Test Points&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="LSP10">
+<description>&lt;b&gt;SOLDER PAD&lt;/b&gt;&lt;p&gt;
+drill 1.0 mm</description>
+<wire x1="-1.27" y1="0.254" x2="-1.27" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.254" x2="1.27" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.254" x2="1.143" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-0.254" x2="1.143" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-0.254" x2="-1.143" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.254" x2="-1.143" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="1.143" y1="0.254" x2="0.635" y2="0.254" width="0.1524" layer="51"/>
+<wire x1="-1.143" y1="-0.254" x2="-0.635" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="0.635" y1="0.254" x2="0.635" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="0.635" y1="0.254" x2="-0.635" y2="0.254" width="0.1524" layer="51"/>
+<wire x1="0.635" y1="-0.254" x2="1.143" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="-0.635" y1="0.254" x2="-0.635" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="-0.635" y1="0.254" x2="-1.143" y2="0.254" width="0.1524" layer="51"/>
+<wire x1="-0.635" y1="-0.254" x2="0.635" y2="-0.254" width="0.1524" layer="51"/>
+<pad name="MP" x="0" y="0" drill="1.016" diameter="2.159" shape="octagon"/>
+<text x="-1.27" y="1.27" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="0.254" size="0.0254" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="LSP">
+<wire x1="-1.016" y1="2.032" x2="1.016" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="0" x2="1.016" y2="2.032" width="0.254" layer="94"/>
+<circle x="0" y="1.016" radius="1.016" width="0.4064" layer="94"/>
+<text x="-1.27" y="2.921" size="1.778" layer="95">&gt;NAME</text>
+<pin name="MP" x="0" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LSP10" prefix="LSP">
+<description>&lt;b&gt;SOLDER PAD&lt;/b&gt;&lt;p&gt; drill 1.0 mm, distributor Buerklin, 12H555</description>
+<gates>
+<gate name="1" symbol="LSP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="LSP10">
+<connects>
+<connect gate="1" pin="MP" pad="MP"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -15192,8 +15246,8 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <part name="T10" library="transistor" deviceset="*-NPN-" device="TO92-CBE" technology="BC547" value="547"/>
 <part name="R14" library="resistor" deviceset="R-EU_" device="0204_7" value="100k"/>
 <part name="SUPPLY11" library="supply2" deviceset="GND" device=""/>
-<part name="R15" library="resistor" deviceset="R-EU_" device="0204_7" value="330r"/>
-<part name="R16" library="resistor" deviceset="R-EU_" device="0204_7" value="10k"/>
+<part name="R15" library="resistor" deviceset="R-EU_" device="0207_7" value="330r"/>
+<part name="R16" library="resistor" deviceset="R-EU_" device="0207_7" value="10k"/>
 <part name="SUPPLY12" library="supply2" deviceset="+12V" device=""/>
 <part name="R17" library="resistor" deviceset="R-EU_" device="0204_7" value="33k"/>
 <part name="D3" library="diode" deviceset="1N4148" device="DO35-7" value=""/>
@@ -15232,12 +15286,13 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <part name="U1" library="eurorack" deviceset="POWER" device=""/>
 <part name="FB1" library="adafruit" deviceset="FB" device=""/>
 <part name="FB2" library="adafruit" deviceset="FB" device=""/>
-<part name="OUT" library="erthenvar" deviceset="AUDIO-JACK" device="ERTHENVAR" value="AUDIO-JACKERTHENVAR"/>
-<part name="GATE" library="erthenvar" deviceset="AUDIO-JACK" device="ERTHENVAR" value="AUDIO-JACKERTHENVAR"/>
+<part name="OUT" library="erthenvar" deviceset="AUDIO-JACK" device="ITEAD" value="AUDIO-JACKITEAD"/>
 <part name="DEC" library="pot" deviceset="3RP/1610N" device="" value="A1M"/>
 <part name="REL" library="pot" deviceset="3RP/1610N" device="" value="A1M"/>
 <part name="ATT" library="pot" deviceset="3RP/1610N" device="" value="A500K"/>
 <part name="SUST" library="pot" deviceset="3RP/1610N" device="" value="B100k"/>
+<part name="GATE" library="solpad" deviceset="LSP10" device=""/>
+<part name="NORM" library="solpad" deviceset="LSP10" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15497,13 +15552,16 @@ R 1M log</text>
 <instance part="OUT" gate="G$1" x="261.62" y="50.8" smashed="yes" rot="R180">
 <attribute name="NAME" x="269.113" y="46.355" size="1.778" layer="95" rot="R180"/>
 </instance>
-<instance part="GATE" gate="G$1" x="58.42" y="45.72" smashed="yes" rot="MR180">
-<attribute name="NAME" x="50.927" y="41.275" size="1.778" layer="95" rot="MR180"/>
-</instance>
 <instance part="DEC" gate="G$1" x="200.66" y="15.24" rot="R90"/>
 <instance part="REL" gate="G$1" x="195.58" y="81.28" rot="R90"/>
 <instance part="ATT" gate="G$1" x="195.58" y="55.88" rot="R90"/>
 <instance part="SUST" gate="G$1" x="129.54" y="5.08"/>
+<instance part="GATE" gate="1" x="63.5" y="50.8" smashed="yes" rot="R90">
+<attribute name="NAME" x="60.579" y="49.53" size="1.778" layer="95" rot="R90"/>
+</instance>
+<instance part="NORM" gate="1" x="63.5" y="43.18" smashed="yes" rot="R90">
+<attribute name="NAME" x="60.579" y="36.83" size="1.778" layer="95" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -15521,11 +15579,7 @@ R 1M log</text>
 <wire x1="101.6" y1="40.64" x2="116.84" y2="40.64" width="0.1524" layer="91"/>
 <junction x="101.6" y="40.64"/>
 <pinref part="SUPPLY4" gate="GND" pin="GND"/>
-<wire x1="66.04" y1="43.18" x2="73.66" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="43.18" x2="73.66" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="40.64" x2="83.82" y2="40.64" width="0.1524" layer="91"/>
 <junction x="83.82" y="40.64"/>
-<pinref part="GATE" gate="G$1" pin="RING"/>
 </segment>
 <segment>
 <pinref part="R9" gate="G$1" pin="1"/>
@@ -15968,7 +16022,7 @@ R 1M log</text>
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="66.04" y1="50.8" x2="73.66" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="GATE" gate="G$1" pin="TIP"/>
+<pinref part="GATE" gate="1" pin="MP"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -16026,9 +16080,9 @@ R 1M log</text>
 <wire x1="66.04" y1="-2.54" x2="45.72" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="-2.54" x2="45.72" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="20.32" x2="68.58" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="20.32" x2="68.58" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="GATE" gate="G$1" pin="NORM"/>
-<wire x1="68.58" y1="45.72" x2="66.04" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="20.32" x2="68.58" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="43.18" x2="66.04" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="NORM" gate="1" pin="MP"/>
 </segment>
 </net>
 <net name="N$6" class="0">
