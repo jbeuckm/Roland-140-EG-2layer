@@ -144,6 +144,8 @@
 <wire x1="98.73" y1="0" x2="98.73" y2="45.71" width="0" layer="20"/>
 <wire x1="98.73" y1="45.71" x2="0" y2="45.71" width="0" layer="20"/>
 <wire x1="0" y1="45.71" x2="0" y2="0" width="0" layer="20"/>
+<text x="97.79" y="6.985" size="2.1844" layer="26" rot="MR0">https://github.com/jbeuckm/Roland-140-EG-2layer.git</text>
+<text x="22.225" y="6.985" size="2.1844" layer="26" rot="MR0">Release v0.1</text>
 </plain>
 <libraries>
 <library name="pot">
