@@ -15293,6 +15293,8 @@ drill 1.0 mm</description>
 <part name="SUST" library="pot" deviceset="3RP/1610N" device="" value="B100k"/>
 <part name="GATE" library="solpad" deviceset="LSP10" device=""/>
 <part name="NORM" library="solpad" deviceset="LSP10" device=""/>
+<part name="GND" library="solpad" deviceset="LSP10" device=""/>
+<part name="SUPPLY22" library="supply2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15562,6 +15564,10 @@ R 1M log</text>
 <instance part="NORM" gate="1" x="63.5" y="43.18" smashed="yes" rot="R90">
 <attribute name="NAME" x="60.579" y="36.83" size="1.778" layer="95" rot="R90"/>
 </instance>
+<instance part="GND" gate="1" x="63.5" y="60.96" smashed="yes" rot="R90">
+<attribute name="NAME" x="60.579" y="54.61" size="1.778" layer="95" rot="R90"/>
+</instance>
+<instance part="SUPPLY22" gate="GND" x="66.04" y="55.88"/>
 </instances>
 <busses>
 </busses>
@@ -15651,6 +15657,11 @@ R 1M log</text>
 <wire x1="101.6" y1="12.7" x2="111.76" y2="12.7" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="GND"/>
 <wire x1="86.36" y1="12.7" x2="63.5" y2="12.7" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND" gate="1" pin="MP"/>
+<pinref part="SUPPLY22" gate="GND" pin="GND"/>
+<wire x1="66.04" y1="60.96" x2="66.04" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+12V" class="0">
